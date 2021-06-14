@@ -1,10 +1,9 @@
-const mongoose = require( 'mongoose');
-const CONFIG = require('./config');
-
+import * as mongoose from 'mongoose';
+import CONFIG from './config';
 mongoose.set('useCreateIndex', true);
 
 // Connecting to the database
- const connectdb= async () => {
+export default (async () => {
     try {
         await mongoose.connect(
             CONFIG.DB_HOST,
@@ -16,6 +15,5 @@ mongoose.set('useCreateIndex', true);
         console.log(`${err} Could not Connect to the Database. Exiting Now...`);
         process.exit();
     }
-};
+})();
 
-module.exports  = connectdb;
