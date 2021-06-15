@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+  recipe-app-db:
+    image: mongo
+    restart: always
+    container_name: recipe-app-db
+    ports:
+      - 27016:27016
+    volumes:
+      - recipe-app-db:/data/db
+    networks:
+      - recipe-app-network
+
+  recipe-app-app:
+    image: Devendra/recipe-app-app:dev
+    build:
+      context: .
+      target: dev
+    container_name: recipe-app-app
+    restart: always
+    volumes:
+      - .:/app
+    ports:
+      - "3006:3006"
+      - "3000:3000"
+    depends_on:
+      - recipe-app-db
+    environment:
+      - MONGODB_URI=mongodb://recipe-app-db/recipe-app-db
+    networks:
+      - recipe-app-network
+
+volumes:
+  recipe-app-db:
+    name: recipe-app-db
+
+networks:
+  recipe-app-network:
+    name: recipe-app-network

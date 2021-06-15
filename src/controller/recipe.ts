@@ -24,7 +24,6 @@ import { findAll, findOne, remove, save, update } from '../services/recipe.servi
             });
         }
     };
-
     export const findOneRecipe = async (req: Request, res: Response): Promise<any> => {
         try {
             const recipe = await findOne(req.params.id);
@@ -97,6 +96,7 @@ import { findAll, findOne, remove, save, update } from '../services/recipe.servi
 
 
     export const saveRecipe = async (req: Request, res: Response): Promise<any> => {
+        console.log('req', req,res)
         try {
             const recipe = await save(req.body)
             if (recipe) {

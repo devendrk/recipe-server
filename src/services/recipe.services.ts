@@ -14,7 +14,6 @@ import Recipe, { IRecipe } from '../models/recipe';
     }
 
     export const save = async (data: any): Promise<any> => {
-        //const payload = validate(data, joiSchema.userType);
         const { name, description, rating  } = data;
         const imageLink = images[Math.floor(Math.random() * images.length)];
         const recipe: IRecipe = new Recipe({ name, description, rating , image: imageLink });

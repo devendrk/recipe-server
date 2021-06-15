@@ -15,6 +15,6 @@ recipe.put('/:id', updateRecipe);
 // Delete a recipe with Id
 recipe.delete('/:id', removeRecipe);
 
-recipe.post('/save', saveRecipe);
+recipe.post('/', saveRecipe);
 
 export default recipe;
