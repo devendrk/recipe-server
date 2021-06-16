@@ -1,0 +1,27 @@
+@import "../../scss/config";
+.recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__name {
+    font-size: $t-big;
+    font-weight: 700;
+    color: $dark;
+    text-transform: uppercase;
+    margin-top: 1.5em;
+  }
+  &__description,
+  &__rating {
+    padding: 12px 0;
+    font-size: $t-medium;
+    font-weight: 500;
+    margin-top: 0.5em;
+    color: $primary;
+  }
+}
+
+.edit_btn {
+  display: flex;
+  align-self: flex-end;
+  margin: 2em;
+}

@@ -1,0 +1,60 @@
+@import "../../scss/config";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border: 0px solid #b0b1ae;
+  justify-content: center;
+  background-color: white;
+  padding: 0.5em 0.5em;
+  position: relative;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+
+  &__input {
+    width: 100%;
+    height: 45px;
+    border: 2px solid $primary;
+    margin: 10px 0px;
+    border-radius: $r-medium;
+    padding: 1.5em 1em;
+    font-size: $t-small;
+    background-color: $light;
+    color: $dark;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  &__textarea {
+    width: 100%;
+    border: 2px solid $primary;
+    margin: 10px 0px;
+    border-radius: $r-medium;
+    padding: 1.5em 2em;
+    font-size: $t-small;
+    background-color: $light;
+    color: $dark;
+    outline: none;
+    box-sizing: border-box;
+  }
+  &__input:focus,
+  &__textarea:focus {
+    border: 2.3px solid $primary;
+    box-shadow: 0 0 10px $primary;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  /* For tablets: */
+  .form {
+    padding: 1.5em 1.5em;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .form {
+    margin: 0 20px;
+  }
+}

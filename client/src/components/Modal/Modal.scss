@@ -1,0 +1,39 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  max-height: 95%;
+  border: 0px solid #b0b1ae;
+  justify-content: center;
+  background-color: white;
+  padding: 2em 2em;
+  position: relative;
+  max-width: 50%;
+  margin: 5% auto;
+  -webkit-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.7);
+  border-radius: 2%;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .modal {
+    min-width: 100%;
+    min-height: 100%;
+    padding: 5px 0;
+    &__closebtn {
+      margin-right: 8px;
+      & > button {
+        max-width: 70px;
+        padding: 8px;
+      }
+    }
+  }
+}

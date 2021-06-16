@@ -1,0 +1,25 @@
+@import "../../scss/config";
+
+#searchForm {
+  background-color: transparent;
+  box-shadow: none;
+}
+#searchForm > input {
+  border: 1px solid $primary;
+  text-align: center;
+  margin: 0;
+  padding: 8px;
+}
+
+@media only screen and (max-width: 1200px) {
+  /* For tablets: */
+  .form {
+    padding: 1.5em 1.5em;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .form {
+    margin: 0 20px;
+  }
+}

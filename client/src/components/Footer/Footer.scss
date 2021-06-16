@@ -1,0 +1,61 @@
+@import "../../scss/config";
+
+.footer {
+  width: 100%;
+  background-color: $primary;
+  overflow: hidden;
+  height: 300px;
+  &__items {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__vl {
+    background-color: bisque;
+    width: 2px;
+    height: 150px;
+  }
+
+  &__info-div {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin: 0px;
+    color: $light;
+
+    &--small {
+      margin-left: 1em;
+    }
+
+    &--big {
+      font-size: $t-medium;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__a-tag {
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    &__items {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__vl {
+      display: none;
+    }
+
+    &__info-item {
+      margin: 0 0 20px 10px;
+    }
+  }
+}

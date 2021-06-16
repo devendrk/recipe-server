@@ -1,0 +1,12 @@
+@import "../../scss/config";
+.recipes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.add__btn {
+  display: flex;
+  align-self: flex-end;
+  margin: 2em;
+}
