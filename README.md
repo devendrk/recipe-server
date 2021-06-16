@@ -12,7 +12,7 @@ or
 npm start
 ```
 
-## Customer Endpoints
+## Recipes Endpoints
 
 Endpoints for viewing and manipulating Recipe
 
