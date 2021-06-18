@@ -9,7 +9,7 @@ npm install
 # run in development mode
 npm run dev
 ```
-##  DB Connectio
+##  DB Connection
 Add mongoDB credentials  in .env file  
 
 ## Recipes Endpoints
