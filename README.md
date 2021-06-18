@@ -24,3 +24,6 @@ Endpoints for viewing and manipulating Recipes in Postman
   note: id must be integer
 
 
+NOTE:
+ At the moment Docker doesnot work.
+ Please use npm to run the server. Once dockerize is done I will update the docs. 
