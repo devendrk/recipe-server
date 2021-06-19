@@ -1,4 +1,4 @@
-import * as mongoose from 'mongoose';
+import mongoose from 'mongoose';
 import CONFIG from './config';
 mongoose.set('useCreateIndex', true);
 
@@ -6,7 +6,7 @@ mongoose.set('useCreateIndex', true);
 export default (async () => {
     try {
         await mongoose.connect(
-            CONFIG.DB_HOST,
+            CONFIG.DB_HOST!,
             { useNewUrlParser: true }
         );
         // listen for requests

@@ -62,25 +62,18 @@ import Recipe, { IRecipe } from '../models/recipe';
     }
 
     export const findOneAndUpdate = async (recipeId: String, pushObject: any): Promise<any> => {
-        const updatedRecipe = await Recipe.findOneAndUpdate({ _id: recipeId },
-             function (error, success) {
-                if (error) {
-                    return error
-                } else {
-                    return success
-                }
-            });
-        return updatedRecipe;
+        try {
+            const updatedRecipe = await Recipe.findOneAndUpdate({ _id: recipeId });
+            return updatedRecipe;
+          } catch (error) {
+            return error;
+          }
     }
 
     export const findOneAndRemove = async (userId: String, pullObject: any): Promise<any> => {
-        const updatedUser = await Recipe.findOneAndUpdate({ _id: userId },
-            function (error, success) {
-                if (error) {
-                    return error
-                } else {
-                    return success
-                }
-            });
-        return updatedUser;
+        try {
+            await Recipe.findOneAndUpdate({ _id: userId });
+          } catch (error) {
+            return error;
+          }
     }

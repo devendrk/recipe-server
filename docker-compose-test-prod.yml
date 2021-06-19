@@ -13,11 +13,11 @@ services:
       - recipe-network
 
   recipe-app:
-    image: thisk8brd/recipe-app:prod
+    image: devendra120/recipe-app1:buildprod123
     build:
       context: .
       target: prod
-    container_name: recipe-app
+    container_name: recipe-app-prod
     restart: always
     volumes:
       - .:/app
