@@ -1,5 +1,7 @@
 ## **Recipe-api**
 
+## live Demo: http://secret-sands-84459.herokuapp.com/
+
 ## Quick Start
 
 ```shell
@@ -9,8 +11,10 @@ npm install
 # run in development mode
 npm run dev
 ```
-##  DB Connection
-Add mongoDB credentials  in .env file  
+
+## DB Connection
+
+Add mongoDB credentials in .env file
 
 ## Recipes Endpoints
 
@@ -23,7 +27,6 @@ Endpoints for viewing and manipulating Recipes in Postman
 - delete Recipe : `DELETE /api/recipes/:id`
   note: id must be integer
 
-
 NOTE:
- At the moment Docker doesnot work.
- Please use npm to run the server. Once dockerize is done I will update the docs. 
+At the moment Docker dev doesnot work.
+Please use npm to run the server. Once dockerize is done I will update the docs.
