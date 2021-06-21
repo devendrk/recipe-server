@@ -1,6 +1,5 @@
 ## **Recipe-api**
 
-## live Demo: http://secret-sands-84459.herokuapp.com/
 
 ## Quick Start
 
